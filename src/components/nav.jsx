@@ -15,7 +15,7 @@ function Nav(){
                     <li className="hover:scale-110 hover:border-b-2">Menu</li>
                 </li>
                 <li className="flex gap-3 lg:gap-13 flex-col lg:flex-row">
-                     <li className="hover:scale-110 hover:border-b-2 mt-3 lg:mt-0">Contact</li>
+                     <li className="hover:scale-110 hover:border-b-2 mt-3 lg:mt-0"><Link to={'/contact'}>Contact</Link></li>
                       <li className="hover:scale-110 hover:border-b-2">Profile</li>
                        <li className="hover:scale-110 hover:border-b-2"><Link to={'/signin'}>SignIn</Link></li>
                         <li className="hover:scale-110 hover:border-b-2"><Link to={'/signup'}>SignUp</Link></li>

@@ -6,6 +6,7 @@ import SignIn from './pages/userPannel/hero/signin'
 import Footer from './components/footer'
 import SignUp from './pages/userPannel/hero/signup'
 import NavProducts from './pages/userPannel/hero/products'
+import Contact from './pages/userPannel/hero/contact'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
     <Route path='/signin' element={<SignIn/>} />
     <Route path='/signup' element={<SignUp/>} />
     <Route path='/nproducts' element={<NavProducts/>} />
+    <Route path='/contact' element={<Contact/>} />
 
    
   </Routes>
