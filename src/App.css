@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+body{
+    color: #6a8a08;
+}
+
+/* Keyframe for continuous rotation */
+@keyframes rotateBowl {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply animation to the bowl image */
+.animate-rotate {
+  animation: rotateBowl 10s linear infinite;
+}
+
+
+
+/* MAIN WRAPPER */
+.slider-container {
+  width: 100%;
+  margin: 0px auto;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+/* TRACK THAT SCROLLS */
+.slider-track {
+  display: flex;
+  /* gap: 2px; */
+  animation: scroll 20s linear infinite;
+}
+
+/* PAUSE WHEN HOVERING */
+.slider-track:hover {
+  animation-play-state: paused;
+}
+
+/* HIDE SCROLLBAR (Chrome, Safari) */
+.slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* HIDE SCROLLBAR (Firefox) */
+.slider-container {
+  scrollbar-width: none;
+}
+
+/* AUTO SCROLL ANIMATION */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
