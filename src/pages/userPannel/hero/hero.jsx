@@ -1,5 +1,3 @@
-import Footer from "../../../components/footer"
-import { SeasonalCard } from "../../../components/seasonalCard"
 
 import Home from "../home"
 import OurStory from "../ourstory"
@@ -21,7 +19,9 @@ function Hero(){
         <OurServices/>
         <NewProduct/>
         <Slider/>
+        {/* <ProductsCard/> */}
         <Reservation/>
+        
         {/* <Footer/> */}
         </>
     )

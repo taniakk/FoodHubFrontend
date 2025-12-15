@@ -7,6 +7,7 @@ import Footer from './components/footer'
 import SignUp from './pages/userPannel/hero/signup'
 import NavProducts from './pages/userPannel/hero/products'
 import Contact from './pages/userPannel/hero/contact'
+import About from './pages/userPannel/hero/about'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
     <Route path='/signup' element={<SignUp/>} />
     <Route path='/nproducts' element={<NavProducts/>} />
     <Route path='/contact' element={<Contact/>} />
+    <Route path='/about' element={<About/>} />
 
    
   </Routes>

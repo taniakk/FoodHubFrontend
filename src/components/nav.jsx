@@ -10,7 +10,7 @@ function Nav(){
             <ul className={` lg:w-[90%] lg:flex   absolute lg:static text-xl mx-auto  ${open ? "flex" : "hidden"}  lg:flex-row flex-col  items-center justify-center lg:justify-between   bg-white/90 lg:bg-transparent top-15  -right-8 p-7 lg:p-0 rounded-4xl lg:rounded-none z-30 `}>
                 <li className="flex gap-3 lg:gap-13 flex-col lg:flex-row ">
                     <li className="hover:scale-110 hover:border-b-2"><Link to={'/'}>Home</Link></li>
-                    <li className="hover:scale-110 hover:border-b-2">About</li>
+                    <li className="hover:scale-110 hover:border-b-2"><Link to={'/about'}>About</Link></li>
                     <li className="hover:scale-110 hover:border-b-2"><Link to={'/nproducts'}>Product</Link></li>
                     <li className="hover:scale-110 hover:border-b-2">Menu</li>
                 </li>
