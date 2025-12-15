@@ -9,7 +9,7 @@ function Footer(){
     return(
         <div className="bg-white/50 h-auto py-10 w-full flex flex-col items-center justify-evenly relative">
             <div className="bg-white/60 py-6 flex flex-col lg:flex-row  items-center justify-evenly lg:h-[140px] shadow-2xl
-             lg:w-[70%] absolute -top-25 gap-5 lg:gap-0 rounded-2xl border border-[#6B8E23]">
+              lg:w-[70%] absolute -top-25 gap-5 lg:gap-0 rounded-2xl border border-[#6B8E23]">
                 <h1 className="font-bold text-[20px] px-5 lg:px-0 lg:text-[30px] w-[400px]">Sign Up To Get Updates & News About Us.</h1>
                 <input className="border border-gray-700 p-2 lg:p-4 lg:text-[20px] rounded-xl placeholder-gray-700 " type="text" placeholder="placeholder" />
                 <button className="border p-2 lg:p-4 bg-[#6B8E23] hover:bg-white hover:text-gray-800 text-white rounded-2xl text-[20px] w-[150px] font-semibold">Subscribe</button>
