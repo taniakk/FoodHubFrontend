@@ -1,6 +1,7 @@
 
 import Home from "../home"
 import OurStory from "../ourstory"
+import Cart from "./cart"
 import Natural from "./natural"
 import NewProduct from "./newproduct"
 import OurServices from "./ourservices"
