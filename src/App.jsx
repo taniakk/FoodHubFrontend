@@ -1,35 +1,18 @@
-import { Routes, Route } from 'react-router-dom'
-import './App.css'
-import Hero from './pages/userPannel/hero/hero'
-import Nav from './components/nav'
-import SignIn from './pages/userPannel/hero/signin'
-import Footer from './components/footer'
-import SignUp from './pages/userPannel/hero/signup'
-import NavProducts from './pages/userPannel/hero/products'
-import Contact from './pages/userPannel/hero/contact'
-import About from './pages/userPannel/hero/about'
-import Cart from './pages/userPannel/hero/cart'
+import { useContext } from "react";
+import { AuthContext } from "./context/authContext";
+import UserApp from "./UserApp";
+import AdminApp from "./adminApp";
+
 
 function App() {
+  const { auth, type } = useContext(AuthContext);
 
-  return (
-  <>
-  <Nav/>
-  <Routes>
-    <Route path='/' element={<Hero/>}/>
-    <Route path='/signin' element={<SignIn/>} />
-    <Route path='/signup' element={<SignUp/>} />
-    <Route path='/nproducts' element={<NavProducts/>} />
-    <Route path='/contact' element={<Contact/>} />
-    <Route path='/about' element={<About/>} />
-    <Route path='cart' element={<Cart/>} />
+  if (type === "admin") {
+    return <AdminApp />;
+  }
 
-   
-  </Routes>
-    <Footer/>
-  
-  </>
-  )
+  return <UserApp />;
 }
 
-export default App
+
+export default App;

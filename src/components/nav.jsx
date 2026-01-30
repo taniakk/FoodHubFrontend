@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaHamburger } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../context/authContext";
 function Nav(){
     const [open ,setOpen] = useState(false)
+    const {auth} = useContext(AuthContext)
+    console.log(auth);
+    
     return(
         < div className="lg:py-5 py-6">
          <div className="w-[50%] lg:w-[80%] mx-auto border lg:border-0  rounded-full bg-gray-100 h-[10vh] flex items-center justify-center relative shadow-lg">
@@ -18,8 +22,14 @@ function Nav(){
                      <li className="hover:scale-110 hover:border-b-2 mt-3 lg:mt-0"><Link to={'/contact'}>Contact</Link></li>
                       <li className="hover:scale-110 hover:border-b-2">Profile</li>
                          <li className="hover:scale-110 hover:border-b-2"><Link to={'/cart'}>Cart</Link></li>
-                       <li className="hover:scale-110 hover:border-b-2"><Link to={'/signin'}>SignIn</Link></li>
+                       {
+                        !auth && (
+                            <>
+                            <li className="hover:scale-110 hover:border-b-2"><Link to={'/signin'}>SignIn</Link></li>
                         <li className="hover:scale-110 hover:border-b-2"><Link to={'/signup'}>SignUp</Link></li>
+                            </>
+                        )
+                       }
                 </li>
             </ul>
             <FaHamburger className="size-7 lg:hidden block ml-20 relative hover:scale-110 active:scale-90"  onClick={()=>setOpen(!open)}/>

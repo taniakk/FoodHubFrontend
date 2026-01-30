@@ -7,27 +7,27 @@ import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 function Footer(){
     return(
-        <div className="bg-white/50 h-auto py-10 w-full flex flex-col items-center justify-evenly relative">
-            <div className="bg-white/60 py-6 flex flex-col lg:flex-row  items-center justify-evenly lg:h-[140px] shadow-2xl
-              w-full lg:w-[70%] lg:absolute -top-25 gap-5 lg:gap-0 rounded-2xl border border-[#6B8E23]">
+        <div className="bg-white/50 min-h-screen py-10 w-full flex flex-col items-center justify-evenly relative">
+            <div className="bg-white/60 py-6 flex flex-col lg:flex-row  items-center justify-evenly min-h-[140px] shadow-2xl
+              w-full lg:w-[70%] static lg:absolute -top-25 gap-5 lg:gap-0 lg:rounded-2xl border border-[#6B8E23]">
                 <h1 className="font-bold text-[20px] px-5 lg:px-0 lg:text-[30px] w-[400px]">Sign Up To Get Updates & News About Us.</h1>
                 <input className="border border-gray-700 p-2 lg:p-4 lg:text-[20px] rounded-xl placeholder-gray-700 " type="text" placeholder="placeholder" />
                 <button className="border p-2 lg:p-4 bg-[#6B8E23] hover:bg-white hover:text-gray-800 text-white rounded-2xl text-[20px] w-[150px] font-semibold">Subscribe</button>
              </div>
             <div className="flex flex-col lg:flex-row items-center justify-evenly">
-            <div className=" h-auto  w-[80%] py-28 lg:py-0 lg:w-[25%] flex flex-col justify-center">
-               <div className=""><img src="" alt="" srcset="/images/foodlogo.png" className="ml-25 my-2 h-[100px]"/></div> 
+            <div className="  px-10 lg:w-[25%] py-28 lg:py-0  flex flex-col justify-center">
+               <div className=""><img src="" alt="" srcset="/images/foodlogo.png" className="mx-auto my-2 h-[100px]"/></div> 
                <p className="text-gray-600 text-[20px]">Welcome to Green Eats, where every meal is a journey into wholesome indulgence. Our commitment to fresh,
                  sustainable ingredients transforms dining into an experience.</p>
-                 <div className="lg:h-[100px] lg:w-[80%] flex items-center justify-between">
-                   <FaFacebookF  className="text-white size-12 p-2 bg-[#6B8E23] hover:scale-110 rounded-xl"/>
-                    <FaTwitter className="text-white size-12 p-2 bg-[#6B8E23] hover:scale-110 rounded-xl" />
-                    <FaLinkedinIn className="text-white size-12 p-2 bg-[#6B8E23] hover:scale-110 rounded-xl"/>
-                    <FaInstagram className="text-white size-12 p-2 bg-[#6B8E23] hover:scale-110 rounded-xl"/>
+                 <div className="min-h-[100px]  w-full lg:w-[80%] flex flex-wrap items-center justify-between">
+                   <FaFacebookF  className="text-white h-[50px] w-[50px] p-2 bg-[#6B8E23] hover:scale-110 rounded-full"/>
+                    <FaTwitter className="text-white h-[50px] w-[50px] p-2 bg-[#6B8E23] hover:scale-110 rounded-full" />
+                    <FaLinkedinIn className="text-white h-[50px] w-[50px] p-2 bg-[#6B8E23] hover:scale-110 rounded-full"/>
+                    <FaInstagram className="text-white h-[50px] w-[50px] p-2 bg-[#6B8E23] hover:scale-110 rounded-full"/>
 
                  </div>
             </div>
-            <div className=" h-auto lg:w-[20%] flex flex-col justify-center list-none">
+            <div className=" lg:w-[20%] flex flex-col justify-center list-none">
                 <h1 className="text-[30px] font-bold py-2">Quick Links</h1>
                 <li className="text-gray-600 text-[20px]">About Us</li>
                 <li className="text-gray-600 text-[20px]">Portfolio</li>
@@ -35,7 +35,7 @@ function Footer(){
                 <li className="text-gray-600 text-[20px]">Blog</li>
                 <li className="text-gray-600 text-[20px]">Contact Us</li>
             </div>
-            <div className="py-6 lg:py-0 px-4 lg:px-0 h-auto lg:w-[30%] flex flex-col justify-center gap-4 lg:gap-0 ">
+            <div className="py-6 lg:py-0 px-4 lg:px-0  lg:w-[30%] flex flex-col justify-center gap-4 lg:gap-0 ">
                 <h1 className="text-[30px] font-bold text-center lg:self-start">Contact Us</h1>
                 <div className=" lg:h-[100px] lg:w-full gap-5 flex items-center justify-center">
                     <FaLocationDot className="text-white size-12 p-2 bg-[#6B8E23] hover:scale-110 rounded-xl"/>

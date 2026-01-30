@@ -1,4 +1,5 @@
 
+import Admin from "../../adminPannel/admin"
 import Home from "../home"
 import OurStory from "../ourstory"
 import Cart from "./cart"
