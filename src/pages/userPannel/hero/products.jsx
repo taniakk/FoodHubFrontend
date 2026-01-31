@@ -2,22 +2,22 @@ import ProductsCard from "../../../components/productsCard"
 import { cat } from "../Data/cat"
 function NavProducts(){
 
-//array of object
+// array of object
 
-    // const cat = [
-    //     {
-    //         img:'/navProductsimgs/img1.jpg',
-    //         heading:'BURGER'
-    //     },
-    //      {
-    //         img:'/navProductsimgs/img1.jpg',
-    //         heading:'BURGER1'
-    //     },
-    //      {
-    //         img:'/navProductsimgs/img1.jpg',
-    //         heading:'BURGER2'
-    //     }
-    // ]
+    const cat = [
+        {
+            img:'/navProductsimgs/img1.jpg',
+            heading:'BURGER'
+        },
+         {
+            img:'/navProductsimgs/img1.jpg',
+            heading:'BURGER1'
+        },
+         {
+            img:'/navProductsimgs/img1.jpg',
+            heading:'BURGER2'
+        }
+    ]
 
 
     return(
