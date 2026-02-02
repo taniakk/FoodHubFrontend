@@ -24,7 +24,7 @@ export function AdminNav() {
       </Link>  </li>
 
         <li className="flex items-center gap-3">
-          <MdOutlineCategory size={22} /> Sub-Categories
+          <MdOutlineCategory size={22} /> <Link to={'/subcatTable'}>Sub-Categories</Link>
         </li>
 
         <li className="flex items-center gap-3">
