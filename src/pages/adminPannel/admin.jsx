@@ -3,9 +3,9 @@ import AdminCharts from "./adminChart.jsx"
 
 function Admin(){
     return(
-        <div className=" min-h-screen w-full flex py-10  items-center justify-center gap-8">
+        <div className=" min-h-screen  w-full flex py-10  items-center justify-start gap-8">
             
-            <div className="bg-gray-300/60 min-h-screen lg:w-[60%]  rounded-r-4xl flex flex-col items-center justify-center gap-10">
+            <div className=" min-h-screen lg:w-[80%]  rounded-r-4xl flex flex-col items-center justify-center gap-10">
                 <h1 className="text-3xl font-bold text-gray-600 pt-6">WELCOME TO <span className="text-[#6a8a08] text-4xl"> ADMIN </span> DASHBOARD</h1>
                 <div className="shadow-2xl bg-gray-200/80 lg:h-[30%] w-[80%] rounded-4xl flex items-center justify-center">
                  <div className=" lg:w-[65%]">
