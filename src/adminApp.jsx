@@ -9,6 +9,10 @@ import UserTable from './pages/adminPannel/userTable'
 import SubCategory from './pages/adminPannel/subcat'
 import { CategoryTable } from './pages/adminPannel/categoryTable'
 import SubCatTable from './pages/adminPannel/subcatTable'
+import OrderTable from './pages/adminPannel/orderTable'
+import CartTable from './pages/adminPannel/cartTable'
+import { PaymentTable } from './pages/adminPannel/paymentTable'
+
 
 function AdminApp() {
 
@@ -25,6 +29,9 @@ function AdminApp() {
     <Route path='/user' element={<UserTable/>}/>
     <Route path='/CatTable' element={<CategoryTable/>}/>
     <Route path='/subcatTable' element={<SubCatTable/>}/>
+    <Route path='/order' element={<OrderTable/>}/>
+    <Route path='/cart' element={<CartTable/>}/>
+    <Route path='/payment' element={<PaymentTable/>}/>
 
 
 

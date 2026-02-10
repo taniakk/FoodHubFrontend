@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 export function AdminNav() {
   return (
-    <nav className="h-[80%] mt-18 flex flex-col bg-gray-300/50 rounded-l-4xl fixed left-0">
+    <nav className="h-[85%] mt-18 flex flex-col bg-gray-300/50 rounded-l-4xl fixed left-0">
       <ul className="h-full text-[18px] px-2 text-gray-700 font-semibold py-10 space-y-4 w-[80%] mx-auto">
         <h2 className="text-[28px] text-[#6a8a08] font-extrabold ">Admin Panel</h2>
 
@@ -40,11 +40,15 @@ export function AdminNav() {
         </li>
 
         <li className="flex items-center gap-3">
-          <MdShoppingCart size={22} /> Cart
+          <MdPeople size={22} /> <Link to={'/order'}>Orders</Link>
         </li>
 
         <li className="flex items-center gap-3">
-          <MdPayment size={22} /> Payment
+          <MdShoppingCart size={22} /> <Link to={'/cart'}>Cart</Link>
+        </li>
+
+        <li className="flex items-center gap-3">
+          <MdPayment size={22} /> <Link to={'/payment'}>Payment</Link>
         </li>
       </ul>
     </nav>
