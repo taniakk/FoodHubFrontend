@@ -17,10 +17,26 @@ export function CategoryTable(){
     useEffect(()=>{
         getData()
     },[])
+
+    async function DeleteCat(id) {
+        console.log(id);
+        try {
+            const response = await axios.delete(`${import.meta.env.VITE_SERVER}/cat/delcat/${id}`)
+            console.log(response.data);
+            getData()
+            
+        } catch (error) {
+            console.log(error);
+            
+            
+        }
+        
+        
+    }
     return(
         <div className="overflow-x-auto min-h-screen  shadow rounded-lg flex flex-col items-center py-10">
       <h1  className="text-[#6a8a08] text-3xl font-extrabold my-10">Category Table</h1>
-        <table className="min-w-[60%] border border-gray-200">
+        <table className="min-w-[50%] border border-gray-200">
             <thead className="bg-gray-100">
                 <tr>
                     <th>ID</th>
@@ -33,11 +49,11 @@ export function CategoryTable(){
                     <tr className="border-t hover:bg-gray-50">
                     <td className="px-4 py-2 text-center">{value._id}</td>
                     <td className="px-4 py-2 text-center">{value.category}</td>
-                    <td className="px-4 py-2 text-center">
+                    <td className="px-4 py-2 text-center space-x-2">
                     <button className="px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600">
                 Edit
               </button>
-              <button className="px-3 py-1 text-sm bg-red-500 text-white rounded hover:bg-red-600">
+              <button className="px-3 py-1 text-sm bg-red-500 text-white rounded hover:bg-red-600"onClick={()=>DeleteCat(value._id)}>
                 Delete
               </button>
                     </td>

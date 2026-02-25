@@ -11,45 +11,96 @@ import { Link } from "react-router-dom";
 
 export function AdminNav() {
   return (
-    <nav className="h-[90%] mt-18 flex flex-col bg-gray-300/50 rounded-4xl fixed left-6">
-      <ul className="h-full text-[18px] px-2 text-gray-700 font-semibold py-10 space-y-4 w-[80%] mx-auto">
-        <h2 className="text-[35px] w-full text-center text-[#6a8a08] font-extrabold ">Admin Panel</h2>
+    <nav className="
+      fixed left-2 md:left-6
+      top-4
+      h-[85vh]
+      w-[70px] md:w-[250px]
+      bg-gray-300/50
+      rounded-3xl
+      flex flex-col
+      items-center md:items-start
+      transition-all duration-300
+    ">
+      <ul className="h-full w-full text-gray-700 font-semibold py-6 space-y-6">
 
-        <li className="flex items-center gap-3 hover:scale-110">
-          <MdDashboard size={22} /><Link to={'/'}>Dasboard</Link>
+        {/* Title - hidden on mobile */}
+        <h2 className="hidden md:block text-[28px] w-full text-center text-[#6a8a08] font-extrabold mb-6">
+          Admin Panel
+        </h2>
+
+        {/* Dashboard */}
+        <li className="hover:scale-110 transition">
+          <Link to="/" className="flex items-center justify-center md:justify-start gap-3 px-2">
+            <MdDashboard size={22} />
+            <span className="hidden md:inline">Dashboard</span>
+          </Link>
         </li>
 
-        <li className="flex items-center gap-3 hover:scale-110">
-        <Link to={'/CatTable'} className="flex items-center gap-3">  <MdCategory size={22} />  Categories
-      </Link>  </li>
-
-        <li className="flex items-center gap-3 hover:scale-110">
-        <Link to={'/subcatTable'} className="flex items-center gap-3">  <MdOutlineCategory size={22} /> Sub-Categories</Link>
+        {/* Categories */}
+        <li className="hover:scale-110 transition">
+          <Link to="/CatTable" className="flex items-center justify-center md:justify-start gap-3 px-2">
+            <MdCategory size={22} />
+            <span className="hidden md:inline">Categories</span>
+          </Link>
         </li>
 
-        <li className="flex items-center gap-3 hover:scale-110">
-        <Link to={'/cat'} className="flex items-center gap-3">  <MdAddBox size={22} /> Add Categories</Link>
+        {/* Sub Categories */}
+        <li className="hover:scale-110 transition">
+          <Link to="/subcatTable" className="flex items-center justify-center md:justify-start gap-3 px-2">
+            <MdOutlineCategory size={22} />
+            <span className="hidden md:inline">Sub-Categories</span>
+          </Link>
         </li>
 
-        <li className="flex items-center gap-3 hover:scale-110">
-        <Link to={'/subcat'} className="flex items-center gap-3">  <MdAddBox size={22} /> Add Sub-Category</Link>
+        {/* Add Category */}
+        <li className="hover:scale-110 transition">
+          <Link to="/cat" className="flex items-center justify-center md:justify-start gap-3 px-2">
+            <MdAddBox size={22} />
+            <span className="hidden md:inline">Add Categories</span>
+          </Link>
         </li>
 
-        <li className="flex items-center gap-3 hover:scale-110">
-        <Link to={'/user'} className="flex items-center gap-3">  <MdPeople size={22} /> Users</Link>
+        {/* Add Sub Category */}
+        <li className="hover:scale-110 transition">
+          <Link to="/subcat" className="flex items-center justify-center md:justify-start gap-3 px-2">
+            <MdAddBox size={22} />
+            <span className="hidden md:inline">Add Sub-Category</span>
+          </Link>
         </li>
 
-        <li className="flex items-center gap-3 hover:scale-110">
-        <Link to={'/order'} className="flex items-center gap-3">  <MdPeople size={22} /> Orders</Link>
+        {/* Users */}
+        <li className="hover:scale-110 transition">
+          <Link to="/user" className="flex items-center justify-center md:justify-start gap-3 px-2">
+            <MdPeople size={22} />
+            <span className="hidden md:inline">Users</span>
+          </Link>
         </li>
 
-        <li className="flex items-center gap-3 hover:scale-110">
-        <Link to={'/cart'} className="flex items-center gap-3">  <MdShoppingCart size={22} /> Cart</Link>
+        {/* Orders */}
+        <li className="hover:scale-110 transition">
+          <Link to="/order" className="flex items-center justify-center md:justify-start gap-3 px-2">
+            <MdPeople size={22} />
+            <span className="hidden md:inline">Orders</span>
+          </Link>
         </li>
 
-        <li className="flex items-center gap-3 hover:scale-110">
-        <Link to={'/payment'} className="flex items-center gap-3">  <MdPayment size={22} /> Payment</Link>
+        {/* Cart */}
+        <li className="hover:scale-110 transition">
+          <Link to="/cart" className="flex items-center justify-center md:justify-start gap-3 px-2">
+            <MdShoppingCart size={22} />
+            <span className="hidden md:inline">Cart</span>
+          </Link>
         </li>
+
+        {/* Payment */}
+        <li className="hover:scale-110 transition">
+          <Link to="/payment" className="flex items-center justify-center md:justify-start gap-3 px-2">
+            <MdPayment size={22} />
+            <span className="hidden md:inline">Payment</span>
+          </Link>
+        </li>
+
       </ul>
     </nav>
   );

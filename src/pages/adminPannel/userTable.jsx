@@ -25,6 +25,23 @@ function UserTable() {
     useEffect(()=>{
         GetData()
     }, [])
+
+    async function DeleteUser(id) {
+      console.log(id);
+      try {
+        const response = await axios.delete(`${import.meta.env.VITE_SERVER}/user/delUser/${id}`)
+        console.log(response.data)
+        GetData()
+        
+        
+      } catch (error) {
+        console.log(error);
+        
+        
+      }
+      
+      
+    }
   return (
     <div className="overflow-x-auto min-h-screen  shadow rounded-lg flex flex-col items-center py-10">
         <h1 className="text-[#6a8a08] text-3xl font-extrabold my-10">USER TABLE</h1>
@@ -67,7 +84,7 @@ function UserTable() {
               <button className="px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600">
                 Edit
               </button>
-              <button className="px-3 py-1 text-sm bg-red-500 text-white rounded hover:bg-red-600">
+              <button className="px-3 py-1 text-sm bg-red-500 text-white rounded hover:bg-red-600" onClick={()=>DeleteUser(d._id)}>
                 Delete
               </button>
             </td>

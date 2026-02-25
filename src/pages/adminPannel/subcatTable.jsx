@@ -22,6 +22,21 @@ function SubCatTable(){
     useEffect(()=>{
         GetTable()
     },[])
+
+    async function DeleteSubCat(id) {
+        console.log(id);
+        try {
+            const response = await axios.delete(`${import.meta.env.VITE_SERVER}/subcat/delSubCat/${id}`)
+            GetTable()
+            
+        } catch (error) {
+            console.log(error);
+            
+            
+        }
+        
+        
+    }
     return(
         <div className="overflow-x-auto min-h-screen  shadow rounded-lg flex flex-col items-center py-10">
             <h1 className="text-[#6a8a08] text-3xl font-extrabold my-10">SUB-CATEGORY TABLE</h1>
@@ -45,7 +60,7 @@ function SubCatTable(){
               <button className="px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600">
                 Edit
               </button>
-              <button className="px-3 py-1 text-sm bg-red-500 text-white rounded hover:bg-red-600">
+              <button className="px-3 py-1 text-sm bg-red-500 text-white rounded hover:bg-red-600" onClick={()=>DeleteSubCat(d._id)}>
                 Delete
               </button>
             </td>

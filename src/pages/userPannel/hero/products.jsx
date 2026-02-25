@@ -10,12 +10,32 @@ function NavProducts(){
             heading:'BURGER'
         },
          {
-            img:'/navProductsimgs/img1.jpg',
-            heading:'BURGER1'
+            img:'/navProductsimgs/img2.jpg',
+            heading:'PIZZA'
         },
          {
-            img:'/navProductsimgs/img1.jpg',
-            heading:'BURGER2'
+            img:'/navProductsimgs/img3.jpg',
+            heading:'VEG ROLLS'
+        },
+        {
+            img:'/navProductsimgs/img4.jpg',
+            heading:'CHEESE BALLS'
+        },
+        {
+            img:'/navProductsimgs/img5.jpg',
+            heading:'CHEESE TACOS'
+        },
+        {
+            img:'/navProductsimgs/img6.jpg',
+            heading:'SANDWICH'
+        },
+        {
+            img:'/navProductsimgs/img7.jpg',
+            heading:'CHICKEN'
+        },
+        {
+            img:'/navProductsimgs/img8.jpg',
+            heading:'VEG THALI'
         }
     ]
 
